@@ -1052,9 +1052,8 @@ class ModmailBot(commands.Bot):
         thread = await self.threads.find(recipient=member)
         if thread:
             embed = discord.Embed(
-                description="", color=self.error_color
             )
-            await thread.channel.send(embed=embed)
+            await e(embed=embed)
 
     async def on_member_join(self, member):
         if member.guild != self.guild:
