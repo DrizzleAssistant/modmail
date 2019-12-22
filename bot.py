@@ -1052,7 +1052,7 @@ class ModmailBot(commands.Bot):
         thread = await self.threads.find(recipient=member)
         if thread:
             embed = discord.Embed(
-                description="The recipient has left the server.", color=self.error_color
+                description="", color=self.error_color
             )
             await thread.channel.send(embed=embed)
 
@@ -1062,7 +1062,7 @@ class ModmailBot(commands.Bot):
         thread = await self.threads.find(recipient=member)
         if thread:
             embed = discord.Embed(
-                description="The recipient has joined the server.", color=self.mod_color
+                description="", color=self.mod_color
             )
             await thread.channel.send(embed=embed)
 
