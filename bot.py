@@ -1141,7 +1141,7 @@ class ModmailBot(commands.Bot):
         elif isinstance(exception, commands.CommandNotFound):
             logger.warning("CommandNotFound: %s", exception)
         elif isinstance(exception, commands.MissingRequiredArgument):
-            await context.send_help(context.command)
+            await context.send_hel(context.command)
         elif isinstance(exception, commands.CheckFailure):
             for check in context.command.checks:
                 if not await check(context):
