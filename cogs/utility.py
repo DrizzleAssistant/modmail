@@ -77,10 +77,10 @@ class ModmailHelpCommand(commands.HelpCommand):
             embeds.append(embed)
         return embeds
 
-    def process_help_msg(self, help_: str):
+    def process_hel_msg(self, help_: str):
         return help_.format(prefix=self.clean_prefix) if help_ else "No help message."
 
-    async def send_bot_help(self, mapping):
+    async def send_bot_hel(self, mapping):
         embeds = []
         no_cog_commands = sorted(mapping.pop(None), key=lambda c: c.qualified_name)
         cogs = sorted(mapping, key=lambda c: c.qualified_name)
