@@ -1061,7 +1061,7 @@ class ModmailBot(commands.Bot):
         thread = await self.threads.find(recipient=member)
         if thread:
             embed = discord.Embed(
-                description="", color=self.mod_color
+                descrption="", color=self.mod_color
             )
             await thread.channel.send(embed=embed)
 
