@@ -1059,11 +1059,6 @@ class ModmailBot(commands.Bot):
         if member.guild != self.guild:
             return
         thread = await self.threads.find(recipient=member)
-        if thread:
-            embed = discord.Embed(
-                descrption="", color=self.mod_color
-            )
-            await thread.channel.send(embed=embed)
 
     async def on_message_delete(self, message):
         """Support for deleting linked messages"""
